@@ -6,9 +6,9 @@ package paquete5;
  */
 public class Persona {
 
-    protected String nombre;
-    protected String apellido;
-    protected String username;
+    private String nombre;
+    private String apellido;
+    private String username;
     
     public Persona(String n, String a, String u){
         nombre = n;

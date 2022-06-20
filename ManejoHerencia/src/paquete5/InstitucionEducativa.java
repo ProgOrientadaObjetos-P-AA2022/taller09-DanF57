@@ -6,8 +6,8 @@ package paquete5;
  */
 public class InstitucionEducativa {
 
-    protected String nombre;
-    protected String siglas;
+    private String nombre;
+    private String siglas;
 
     public void establecerNombre(String c) {
         nombre = c;
