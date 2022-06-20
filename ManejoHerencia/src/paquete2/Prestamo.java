@@ -43,5 +43,19 @@ public class Prestamo {
     public String obtenerCiudad(){
         return ciudad;
     }
+    
+    @Override
+    public String toString(){
+        String reporte = "-----------------------\nBeneficiario\n";
+               reporte = String.format("%sNombre: %s\nApellido: %s\n"
+                       + "Username: %s\nTiempo de préstamo en meses: %d\n", 
+                       reporte, 
+                       beneficiario.obtenerNombre(),
+                       beneficiario.obtenerApellido(),
+                       beneficiario.obtenerUsername(),
+                       tiempo);
+        
+        return reporte;
+    }
 
 }

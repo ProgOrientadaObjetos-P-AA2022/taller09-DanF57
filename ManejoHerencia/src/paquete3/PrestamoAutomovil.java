@@ -1,4 +1,3 @@
-
 package paquete3;
 
 import paquete2.Prestamo;
@@ -41,12 +40,8 @@ public class PrestamoAutomovil extends Prestamo {
         valorAutomovil = vA;
     }
 
-    public void establecerValorMensualPago() {
+    public void establecerValorMensualPagoA() {
         valorMensualPago = valorAutomovil / obtenerTiempo();
-    }
-
-    public void establecerCiudadPrestamo() {
-        ciudad = obtenerCiudad().toLowerCase();
     }
 
     public String obtenerTipoAutomovil() {
@@ -60,23 +55,36 @@ public class PrestamoAutomovil extends Prestamo {
     public Persona obtenerGarante() {
         return garante1;
     }
-    
-    public double obtenerValorAutomovil(){
+
+    public double obtenerValorAutomovil() {
         return valorAutomovil;
     }
-    
-    public double obtenerValorMensualPago(){
+
+    public double obtenerValorMensualPago() {
         return valorMensualPago;
     }
-    
-    public String obtenerCiudadPrestamo(){
-        return ciudad;
+
+    public String obtenerCiudadPrestamo() {
+        return ciudad.toLowerCase();
     }
-    
+
     @Override
-    public String toString(){
-        String reporte = "";
-        
+    public String toString() {
+        String reporte = String.format("%s", super.toString());
+        reporte = String.format("%sCiudad: %s\n"
+                + "Tipo Automovil: %s\n"
+                + "Marca de Automovil: %s\n"
+                + "Garante: %s\n"
+                + "Valor Automovil: %.2f\n"
+                + "Valor Mensual Pago: %.2f\n",
+                reporte,
+                obtenerCiudadPrestamo(),
+                tipoAutomovil,
+                marca,
+                garante1,
+                valorAutomovil,
+                valorMensualPago);
+
         return reporte;
     }
 

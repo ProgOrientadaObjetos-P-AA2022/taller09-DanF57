@@ -22,7 +22,16 @@ public class InstitucionEducativa {
     }
 
     public String obtenerSiglas() {
-        return siglas;
+        return siglas.toUpperCase();
+    }
+
+    @Override
+    public String toString() {
+        String cadena = String.format("Nombre de la Institución: %s - "
+                + "Siglas: %s",
+                obtenerNombre(),
+                obtenerSiglas());
+        return cadena;
     }
 
 }

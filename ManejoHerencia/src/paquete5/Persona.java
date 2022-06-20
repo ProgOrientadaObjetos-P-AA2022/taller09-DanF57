@@ -9,6 +9,12 @@ public class Persona {
     protected String nombre;
     protected String apellido;
     protected String username;
+    
+    public Persona(String n, String a, String u){
+        nombre = n;
+        apellido = a;
+        username = u;
+    }
 
     public void establecerNombre(String c) {
         nombre = c;
@@ -32,6 +38,17 @@ public class Persona {
 
     public String obtenerUsername() {
         return username;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("Nombre: %s - "
+                + "Apellido: %s - "
+                + "Username: %s", 
+                nombre,
+                apellido,
+                username);
+        return cadena;
     }
 
 }
